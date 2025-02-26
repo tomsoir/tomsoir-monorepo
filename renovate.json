@@ -14,7 +14,6 @@
   "automerge": true,
   "automergeType": "pr",
   "platformAutomerge": true,
-  "requiredStatusChecks": ["ci/circleci: build"],
   "packageRules": [
     {
       "matchUpdateTypes": ["patch", "minor"],
