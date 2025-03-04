@@ -58,13 +58,13 @@ webpack_bundle(
 # Dynamically (inject during bundling) or statically (by linking statically generated file)
 sass_binary(
     name = "styles",
-    # src = "src/styles.scss",
-    srcs = [
-        "src/styles.scss",
-        "src/styles/_fonts.scss",
-        "src/styles/_reset.scss",
-        "src/styles/_variables.scss",
-    ],
+    src = "src/styles.scss",
+    #srcs = [
+    #    "src/styles.scss",
+    #    "src/styles/_fonts.scss",
+    #    "src/styles/_reset.scss",
+    #    "src/styles/_variables.scss",
+    #],
     output_dir = "dist",
     output_name = "styles.css",
 )
