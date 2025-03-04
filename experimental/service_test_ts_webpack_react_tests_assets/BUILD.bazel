@@ -3,7 +3,7 @@ load("@aspect_bazel_lib//lib:copy_to_bin.bzl", "copy_to_bin")
 load("@aspect_rules_js//js:defs.bzl", "js_binary", "js_library", "js_test")
 load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
 load("@aspect_rules_webpack//webpack:defs.bzl", "webpack_bundle", "webpack_devserver")
-load("@gzgz_rules_sass//sass:defs.bzl", "sass_binary")
+load("@gzgz_rules_sass//sass:defs.bzl", "sass_binary", "sass_library")
 load("@npm//:defs.bzl", "npm_link_all_packages")
 
 npm_link_all_packages(name = "node_modules")
@@ -56,17 +56,19 @@ webpack_bundle(
 # @TODO: find a better way!
 # Note: We need to figure out first how to inject css into React app:
 # Dynamically (inject during bundling) or statically (by linking statically generated file)
-sass_binary(
-    name = "styles",
-    # src = "src/styles.scss",
+sass_library(
+    name = "styles_lib",
     srcs = [
-        "src/styles.scss",
-        "src/styles/_fonts.scss",
         "src/styles/_reset.scss",
         "src/styles/_variables.scss",
-    ],
+    ]
+)
+sass_binary(
+    name = "styles",
+    src = "src/styles.scss",
     output_dir = "dist",
     output_name = "styles.css",
+    deps = [":styles_lib"]
 )
 
 # Rule works!
