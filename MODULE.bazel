@@ -64,7 +64,7 @@ bazel_dep(name = "aspect_bazel_lib", version = "2.13.0")
 
 # # rules_lint
 # # https://github.com/aspect-build/rules_lint/releases/tag/v1.0.8
-bazel_dep(name = "aspect_rules_lint", version = "1.2.1")
+bazel_dep(name = "aspect_rules_lint", version = "1.2.2")
 
 # ---
 
