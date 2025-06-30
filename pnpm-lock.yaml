@@ -401,8 +401,8 @@ importers:
         specifier: 16.5.0
         version: 16.5.0
       mocha:
-        specifier: 11.7.0
-        version: 11.7.0
+        specifier: 11.7.1
+        version: 11.7.1
       source-map-support:
         specifier: 0.5.21
         version: 0.5.21
@@ -3109,8 +3109,8 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     hasBin: true
 
-  mocha@11.7.0:
-    resolution: {integrity: sha512-bXfLy/mI8n4QICg+pWj1G8VduX5vC0SHRwFpiR5/Fxc8S2G906pSfkyMmHVsdJNQJQNh3LE67koad9GzEvkV6g==}
+  mocha@11.7.1:
+    resolution: {integrity: sha512-5EK+Cty6KheMS/YLPPMJC64g5V61gIR25KsRItHw6x4hEKT6Njp1n9LOlH4gpevuwMVS66SXaBBpg+RWZkza4A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     hasBin: true
 
@@ -7371,7 +7371,7 @@ snapshots:
       yargs-parser: 21.1.1
       yargs-unparser: 2.0.0
 
-  mocha@11.7.0:
+  mocha@11.7.1:
     dependencies:
       browser-stdout: 1.3.1
       chokidar: 4.0.3
